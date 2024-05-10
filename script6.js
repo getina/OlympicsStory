@@ -295,15 +295,35 @@ function gotData(geoData, rehostData) {
     );
     }
 
-function zoomOut(){
-    
-    viz.transition().duration(750).call(
-    zoom.transform,
-    d3.zoomIdentity
-        .translate(0,0)
-        .scale(1)
-    );  
-}   
+  function zoomOut(){
+      
+      viz.transition().duration(750).call(
+      zoom.transform,
+      d3.zoomIdentity
+          .translate(0,0)
+          .scale(1)
+      );  
+  }   
+
+  document.getElementById("OceaniaString").addEventListener("click", function(){
+    // zoomOut();
+    countryShapes.transition().attr("fill", "white");
+    let countriesFocus = ["Australia"]
+
+    let countryData = geoData.features.find(d=>d.properties.admin == "Australia")
+    const [[x0, y0], [x1, y1]] = pathMaker.bounds(countryData);
+    zoomToCountry("Australia", countriesFocus, [[x0, y0], [x1, y1]]);
+  })
+
+  document.getElementById("AsiaString").addEventListener("click", function(){
+    // zoomOut();
+    countryShapes.transition().attr("fill", "white");
+    let countriesFocus = ["China", "Japan", "South Korea"]
+
+    let countryData = geoData.features.find(d=>d.properties.admin == "China")
+    const [[x0, y0], [x1, y1]] = pathMaker.bounds(countryData);
+    zoomToCountry("China", countriesFocus, [[x0, y0], [x1, y1]]);
+  })
 
   document.getElementById("EuropeString").addEventListener("click", function(){
     // zoomOut();

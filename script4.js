@@ -62,7 +62,7 @@ function gotData(geoData, profitData){
   //   return d;
   // })
 
-  console.log("this is profit:", profitData)
+  // console.log("this is profit:", profitData)
   let pathMaker = d3.geoPath(projection);
   viz.selectAll(".country").data(geoData.features).enter()
     .append("path")
@@ -150,11 +150,11 @@ function gotData(geoData, profitData){
           .duration(200)
           .style("opacity", 0.9);
         if(found.Profit > 0){
-          tooltip.html("Country: " + found.Country + "<br/>Profit: " + found.Profit)
+          tooltip.html("Country: " + found.Country + "<br/>Profit: " + Math.abs(found.Profit) + " billion USD")
           .style("left", (event.pageX) + "px")
           .style("top", (event.pageY - 28) + "px");
         }else{
-          tooltip.html("Country: " + found.Country + "<br/>Loss: " + found.Profit)
+          tooltip.html("Country: " + found.Country + "<br/>Loss: " + Math.abs(found.Profit) + " billion USD")
             .style("left", (event.pageX) + "px")
             .style("top", (event.pageY - 28) + "px");
         }
