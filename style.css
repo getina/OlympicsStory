@@ -21,7 +21,7 @@
 
 /* Apply fade-in animation */
 .fade-in {
-    animation: fadeIn 3s forwards;
+    animation: fadeIn 3.5s forwards;
 }
 
 @keyframes fadeIn {

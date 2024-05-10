@@ -167,6 +167,7 @@ function gotData(geoData, profitData){
         .style("opacity", 0);
     });
 
+
 }
 
 d3.json("countries.geo.json").then(function(geoData){
