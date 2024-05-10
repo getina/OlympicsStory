@@ -32,7 +32,7 @@ function gotData(incomingData){
       ]
   }).flat()
 
-  console.log("incoming", incomingData);
+  // console.log("incoming", incomingData);
 
   // Order of operation #2: 
   // I retrieve min and max of the data before restructuing the data

@@ -185,7 +185,7 @@ let existing = true;
 enterView({
   selector: '.graphBox3',
   enter: function(el) {
-    console.log("this is supposed to hapen")
+    // console.log("this is supposed to hapen")
     d3.csv("medalsPerCapita.csv").then(gotData)
     // exisiting = true
   },
@@ -202,7 +202,7 @@ enterView({
     hide()
   },
   exit: function(el) {
-    console.log("this is nOT")
+    // console.log("this is nOT")
     d3.csv("medalsPerCapita.csv").then(gotData)
   },
   offset: 0.5, // enter at middle of viewport

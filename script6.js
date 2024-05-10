@@ -69,7 +69,7 @@ function gotData(geoData, rehostData) {
 
 
 
-  console.log("finalData", finalData);
+  // console.log("finalData", finalData);
   let finalGroupedByCountry = d3.groups(finalData, function (d) {
     return d.Country
   })
@@ -237,7 +237,7 @@ function gotData(geoData, rehostData) {
     }
 
     function returnFlags(){
-        console.log("return flags")
+        // console.log("return flags")
         datagroupsCountry.transition().delay((d, i) => i * 14).attr("transform", getGroupPosEnter);
     }
 
@@ -284,7 +284,7 @@ function gotData(geoData, rehostData) {
 
     // countryShapes.filter(c=>c.properties.admin==countryName).transition().attr("fill", "green")
 
-    console.log([[x0, y0], [x1, y1]])
+    // console.log([[x0, y0], [x1, y1]])
 
     viz.transition().duration(750).call(
     zoom.transform,
