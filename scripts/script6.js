@@ -188,7 +188,7 @@ function gotData(geoData, rehostData) {
 
   function getGroupPosEnter(d, i) {
     let x = projection([d[1][0].label_x, d[1][0].label_y])[0];
-    let y = 0//projection([d[1][0].label_x, d[1][0].label_y])[1];
+    let y = -5//projection([d[1][0].label_x, d[1][0].label_y])[1];
 
     return "translate(" + x + ", " + y + ")"
   }
@@ -380,12 +380,10 @@ function gotData(geoData, rehostData) {
     },
     offset: 0.5, // enter at middle of viewport
   });
-
-
 }
 
 d3.json("countries.geo.json").then(function (geoData) {
-  d3.csv("rehost.csv").then(function (rehostData) {
+  d3.csv("../datasets/rehost.csv").then(function (rehostData) {
     gotData(geoData, rehostData); // Load map 3
   });
 });

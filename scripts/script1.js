@@ -187,8 +187,8 @@ function gotData(medalData, gdpData, countryName){
 
 
 function renderGraph(countryName) {
-  d3.csv("medals.csv").then(function(incomingDataMedals){
-    d3.csv("gdp.csv").then(function(incomingDataGDP){
+  d3.csv("../datasets/medals.csv").then(function(incomingDataMedals){
+    d3.csv("../datasets/gdp.csv").then(function(incomingDataGDP){
       viz.selectAll("*").remove();
       gotData(incomingDataMedals, incomingDataGDP, countryName);
 
@@ -203,7 +203,7 @@ let sideView = d3.select("#sideView")
   // .style("height", "800px")
   ;
 
-d3.csv("medals.csv").then(function(incomingDataMedals){
+d3.csv("../datasets/medals.csv").then(function(incomingDataMedals){
   // d3.csv("gdp.csv").then(function(incomingDataGDP){
     // console.log("name:", countryName)
   let countrySet = new Set(incomingDataMedals.map(d => d.Country_Name));

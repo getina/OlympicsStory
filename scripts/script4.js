@@ -166,12 +166,10 @@ function gotData(geoData, profitData){
         .duration(500)
         .style("opacity", 0);
     });
-
-
 }
 
 d3.json("countries.geo.json").then(function(geoData){
-  d3.csv("summer_profit.csv").then(function(profitData){
+  d3.csv("../datasets/summer_profit.csv").then(function(profitData){
     gotData(geoData, profitData)
   })
 });

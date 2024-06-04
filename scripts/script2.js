@@ -207,16 +207,12 @@ function gotData(medalData, gdpData){
   }, 3000);
 }
 
-
 // load data
-d3.csv("medals.csv").then(function(incomingDataMedals){
-  d3.csv("gdp.csv").then(function(incomingDataGDP){
+d3.csv("../datasets/medals.csv").then(function(incomingDataMedals){
+  d3.csv("../datasets/gdp.csv").then(function(incomingDataGDP){
     gotData(incomingDataMedals, incomingDataGDP)
   })
 });
-
-
-
 
 // function to build x anc y axis.
 // the only reasons these are down here is to make the code above look less polluted
@@ -233,7 +229,6 @@ function buildXAndYAxis(xScale, yScale){
     .text("Medals")
     .attr("font-family", "sans-serif")
     .attr("font-size", "2.3em")
-
   ;
   
 
