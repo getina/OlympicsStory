@@ -162,4 +162,4 @@ function gotData(genderData){
   });
 }
 
-d3.csv("../datasets/gender.csv").then(gotData)
+d3.csv("datasets/gender.csv").then(gotData)

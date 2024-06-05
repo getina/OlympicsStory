@@ -187,8 +187,8 @@ function gotData(medalData, gdpData, countryName){
 
 
 function renderGraph(countryName) {
-  d3.csv("../datasets/medals.csv").then(function(incomingDataMedals){
-    d3.csv("../datasets/gdp.csv").then(function(incomingDataGDP){
+  d3.csv("datasets/medals.csv").then(function(incomingDataMedals){
+    d3.csv("datasets/gdp.csv").then(function(incomingDataGDP){
       viz.selectAll("*").remove();
       gotData(incomingDataMedals, incomingDataGDP, countryName);
 

@@ -146,7 +146,7 @@ function gotData(incomingData){
   ;
 }
 
-d3.csv("../datasets/financials.csv").then(gotData);
+d3.csv("datasets/financials.csv").then(gotData);
 
 // import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 

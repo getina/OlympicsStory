@@ -208,8 +208,8 @@ function gotData(medalData, gdpData){
 }
 
 // load data
-d3.csv("../datasets/medals.csv").then(function(incomingDataMedals){
-  d3.csv("../datasets/gdp.csv").then(function(incomingDataGDP){
+d3.csv("datasets/medals.csv").then(function(incomingDataMedals){
+  d3.csv("datasets/gdp.csv").then(function(incomingDataGDP){
     gotData(incomingDataMedals, incomingDataGDP)
   })
 });

@@ -383,7 +383,7 @@ function gotData(geoData, rehostData) {
 }
 
 d3.json("countries.geo.json").then(function (geoData) {
-  d3.csv("../datasets/rehost.csv").then(function (rehostData) {
+  d3.csv("datasets/rehost.csv").then(function (rehostData) {
     gotData(geoData, rehostData); // Load map 3
   });
 });
