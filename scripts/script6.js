@@ -223,7 +223,7 @@ function gotData(geoData, rehostData) {
           .attr('y', -37)
           .attr('width', 40)
           .attr('height', 40)
-          .attr('xlink:href', '../pictures/flag.svg')
+          .attr('xlink:href', 'pictures/flag.svg')
           .attr("class", "flag")
       
         flagGroups.append("text")
