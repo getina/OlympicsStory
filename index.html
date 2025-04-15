@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>An Olympic Odyssey of Medals and Metrics</title>
-    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/enter-view"></script>
 </head>
 <body>
@@ -14,12 +14,14 @@
         <div class="graphBox0">
             <div id="viz0-stickyBox">
                 <div class="image-container">
-                    <img src="public/pictures/rings.svg" alt="SVG Image" class="fade-in">
-                    <div class="heading fade-in">
-                        <h1>An Olympic Odyssey of Medals and Metrics</h1>
-                        <h4>A Data-Driven Dive into the Olympics</h4>
-                        <p>✍️ by Meredith Lu and 👩‍💻 by Tina Ge</p>
-                    </div>
+                    <!-- <div class="fade-in"> -->
+                        <img src="pictures/rings.svg" alt="SVG Image" class="fade-in">
+                        <div class="heading fade-in">
+                            <h1>An Olympic Odyssey of Medals and Metrics</h1>
+                            <h4>A Data-Driven Dive into the Olympics</h4>
+                            <p>✍️ by Meredith Lu and 👩‍💻 by Tina Ge</p>
+                        </div>
+                    <!-- </div>    -->
                 </div>
             </div>
             <div id="viz0-stick-passersby">
@@ -28,7 +30,199 @@
             </div> 
         </div>
 
-        <!-- ... other content ... -->
+        <div class="articleWrapper">    
+            <p id="firstParagraph">
+                The 1952 Summer Olympic Games in Helsinki, Finland was held in a bruised world: The Cold
+                War was underway, Germany was divided, and Chairman Mao had taken control of China.
+                But a ray of hope emerged from the games: Team Jamaica, consisting of eight athletes, won
+                five medals, topping the medal table by team size.
+            </p>
+
+            <p>
+                Additionally, the number of female Olympians had been slowly increasing, but did not hit the
+                ten percent mark until 1952, or the quarter mark until 1988. While almost 5,400 women
+                marked the highest level of female participation in 2020, the number was still below 50%.
+            </p>
+
+            <p>
+                What's more, although the price tag of $13.2 billion for Rio de Janeiro to host the 2016
+                Olympics resulted in protests about wasteful spending and a misallocation of resources,
+                London actually spent almost two billion more as host city four years prior.
+            </p>
+
+            <p>
+                As these snapshots show, the Olympic Games are shaped not only by athletic performance
+                but also by broader historical, economic, and social forces.
+            </p>
+            
+            <p>
+                The Olympic Games are renowned as one of the world's top sporting events, featuring over
+                10,000 athletes from more than 200 countries competing in over 300 individual events
+                across 28 sports every four years. With over 10 million tickets sold and a global TV audience
+                in the billions, the Olympics are not just a sports spectacle but also a socio-cultural
+                phenomenon.
+            </p>
+
+            <p>
+                This data research story delves behind the scenes into the broader implications of the
+                Olympics, including their economic impact, their role in promoting gender equality, and their
+                influence on global sports trends.
+            </p>
+
+            <h3> 
+                The Winners and the Alternative Winners
+            </h3>
+
+            <p>
+                One of the clearest ways to understand these forces at play is by examining the medal
+                tables—not just the traditional rankings, but also alternative ones that challenge our
+                assumptions about what success really looks like.
+            </p>
+
+            <p>
+                Even before the first event started in Paris this summer of 2024, it was almost certain that
+                the United States would lead the medal table at the end of the Olympics, followed by China
+                and other sizable or prosperous nations. Over the past two decades, the United States has
+                consistently secured top spot in the Summer Olympics, with the exception of the 2008
+                Beijing Games, where they were surpassed by host country, China.
+            </p>
+        </div>
+        <div class="graphBox1">
+            <div id="graphScrollbarWrapper">
+                <div id="sideView"></div>
+                <div id="viz1"></div>
+            </div>
+
+            <p class="caption">Since it was first held in Athens, Greece, in 1896, The modern Olympic Games are
+                considered the world's foremost sports competition with more than 200 teams, representing
+                sovereign states and territories, participating. The graph shows the medals won by each
+                participating country in the Summer Games from 1896 to 2020.</p>
+        </div>
+        <div class="articleWrapper">  
+            <p>
+                But how should we define this success?
+            </p>
+
+            <p>
+                The traditional Olympics medal table is inextricably linked to factors like population size,
+                economic strength, and previous achievements. Typically, larger and wealthier countries
+                dominate the rankings, while smaller nations that perform exceptionally well in relation to
+                their size receive less recognition.
+            </p>
+
+            <p>
+                The alternative medal tables below track countries' Olympic performances not only by their
+                total medal haul but also by taking into account their gross domestic product (GDP) and
+                population size.
+            </p>
+
+            <p>
+                Researchers have 
+                <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2016.00915.x" target="_blank">found</a>
+                that factors like GDP per capita, population size, and previous
+                Olympic medal counts could account for approximately 95% of the variation in countries'
+                final medal counts. This provides a baseline for evaluating whether a country's performance
+                met, exceeded, or fell below expectations.
+            </p>
+
+            <p>
+                GDP, a monetary measure of the market value of all the final goods and services produced
+                and rendered in a year by a country, is often used by a country's government to measure its
+                economic health.
+            </p>
+
+            <p>
+                While GDP alone doesn't directly influence an athlete's performance, it serves as an indicator
+                of factors that do. In wealthy countries, people have more financial resources to support
+                professional athletes and more time to dedicate to leisure activities, resulting in improved
+                sports infrastructure and more effective training opportunities.
+            </p>
+        </div>
+
+        <div class="graphBox2">
+            <div id="viz2"></div>
+            <p class="caption">Numerous factors can influence a country's performance at the Olympics, including
+                economic resources, population size, government investment, sports culture, and tradition.
+                This graph examines the relationship between a country's Gross Domestic Product (GDP) per capita and
+                its total medals won in the Summer Olympics from 1960 to 2020, shedding light on how
+                economic factors may impact Olympic success.</p>
+        </div>
+
+        <div class="articleWrapper"> 
+            <p>
+                These influences are demonstrated by the presence of wealthy nations in the top right
+                quadrant of the graph. Countries like the United States, Great Britain, Germany, and
+                Australia, boasting some of the world's strongest economies, naturally feature among the
+                top 10 performers in Olympic history.
+            </p>
+
+            <p>
+                Meanwhile, clustered in the top left of the graph above are Scandinavian nations such as
+                Switzerland, Sweden, and Norway, indicating their high GDP per capita but relatively modest
+                performance in the Summer Games. But their Winter Games performance, not depicted in
+                the graph, tells a different story, as these countries excel in this arena.
+            </p>
+
+            <p>
+                Norway, for instance, has garnered a total of 405 medals, including 148 gold medals,
+                significantly more than any other nation, in Winter Olympic history. Since 1992, it has only
+                once fallen outside the top four in the Winter Olympics medal table and has topped it in
+                2002, 2018, and 2022. Alongside Austria and Liechtenstein, Norway is one of just three
+                nations to have earned more medals at the Winter Games than at the Summer Games.
+
+            </p>
+                The key to Norway's success extends beyond its cold climate and mountainous terrain. The
+                country's strong emphasis on grassroots participation in winter sports from an early age is
+                crucial. According to 
+                <a href="https://www.theguardian.com/sport/2022/feb/17/secret-behind-norway-winter-olympic-success" target="_blank">The Guardian</a>,
+                an estimated 93% of children regularly participate in
+                winter sports in Norway, laying the groundwork for a substantial and active talent pool that
+                progresses to elite sport training at the Olympiatoppen.
+            <p>
+                Transitioning from the early 2000s, China emerged in the lower right quadrant of the graph,
+                indicating exceptional Olympic performance despite limited economic resources.
+            </p>
+
+            <p>
+                Successful Olympic nations typically excel in a select few disciplines, maximizing their medal
+                count in those areas. The United States, for example, leads in overall medals for swimming,
+                athletics, and shooting. Similarly, China's success is concentrated in specific sports, notably
+                gymnastics, diving, and shooting, which has yielded the most medals for the country. China
+                also boasts more gold medals in table tennis (36 golds) and badminton (20 golds) than any
+                other nation.
+            </p>
+
+            <p>
+                China has pursued a state-driven approach to international sports competitions, focusing on
+                enhancing athletic success through governmental policies and programs. The Olympic Glory-
+                winning Program Guidelines 2001-2010, introduced by China's General Administration of
+                Sports (GASC) in 2002, exemplifies this strategy. The program aimed for China to secure a
+                top-three ranking in medal count at the 2008 Olympics, with "Project 119" specifically
+                targeting sports where China had historically underperformed, such as swimming and
+                rowing, according to 
+                <a href="https://chinapower.csis.org/dominant-china-olympic-games/" target="_blank">ChinaPower Project</a>.
+            </p>
+
+            <p>
+                China's approach is also heavily supported financially. In 2021, GASC had a budget of
+                approximately $1 billion (RMB 6.4 billion). In contrast, Australia, known for its strong
+                performance at the Summer Olympics, allocated only $124 million to the Australian Sports
+                Commission for the 2020-2021 period. The United States, which does not have government-
+                funded sports programs like many other countries, relies on private sponsorships for its
+                athletes.
+            </p>
+
+            <p>
+                The recruitment of athletes in China is also part of this top-down system. Children as young
+                as four years old are identified and trained through China's extensive network of over 2,000
+                state-run sports academies. While this approach has contributed to China's success in
+                winning medals, it has drawn criticism internationally. Some foreign observers have raised
+                concerns about the physical and mental toll these academies impose on young athletes. Tom
+                Terhaar, former head coach of the U.S. Women's Rowing Team, once
+                <a href="https://www.nytimes.com/2008/06/01/sports/olympics/01gold.html?mtrref=www.google.com" target="_blank">described</a>
+                Chinese athletes as "robots with all the resources they could ever ask for."
+            </p>
+        </div>
 
         <div class="graphBox3">
             <div id="viz3"></div>
@@ -37,15 +231,333 @@
             </p>
         </div>
 
-        <!-- ... rest of the content ... -->
+        <div class="articleWrapper"> 
+            <p id="viz3-nextparagraph">
+                When the population is taken into consideration, neither China nor the United States
+                emerges as the champion. Surprisingly, as seen in the graph above, that honor goes to the
+                <span id="BahamasString" style="cursor: pointer;"><u><b>🔗 Bahamas</b></u></span>, a small 
+                Caribbean nation with a population of roughly 400,000 in 2020. In the
+                2020 Tokyo Games, the Bahamas secured two medals. In stark contrast, the 
+                <span id="USString" style="cursor: pointer;"><u><b>🔗 United States</b></u></span>, with a 
+                population nearly 1,000 times larger than the Bahamas, clinched a staggering 113
+                medals, approximately 56 times as many.
+            </p>
+
+            <h3>
+                The Economics of Hosting an Olympics
+            </h3>
+
+            <p>
+                While performance on the podium is one metric of Olympic success, another lies in what
+                happens off the field: the economic stakes and consequences of hosting the Games.
+            </p>
+
+            <p>
+                The opening ceremony of the Paris 2024 Olympics is taking place in less than 100 days. The
+                calculations and evaluations of what economic influence these games would have on the
+                world's top tourist destination, however, had started long before.
+            </p>
+
+            <p>
+                In early April, French President Emmanuel Macron inaugurated an Olympic swimming center
+                in Saint-Denis, marking a significant departure from the past trend of extravagant and
+                underutilized Olympics venues. These games prioritize sustainability by largely utilizing
+                existing or temporary infrastructure and are funded significantly by the private sector. This
+                approach could make them the most cost-effective Olympics in decades for taxpayers,
+                according to 
+                <a href="https://www.bloomberg.com/news/newsletters/2024-04-05/will-the-paris-olympics-boost-the-french-economy-and-macron" target="_blank">Bloomberg</a>.
+            </p>
+
+            <p>
+                Economists have debated whether hosting an Olympics is a blessing or a bliss. According to
+                the 
+                <a href="https://www.cfr.org/backgrounder/economics-hosting-olympic-games" target="_blank">Council on Foreign Relations</a>,
+                an increasing number of economists are suggesting that
+                the advantages of hosting the Olympics are overstated at best and non-existent at worst,
+                often resulting in significant debt and ongoing maintenance costs for host nations. Instead,
+                these experts propose that Olympics committees should revamp the bidding and selection
+                process to encourage more realistic budget projections, enhance transparency, and prioritize
+                sustainable investments that benefit the public.
+            </p>
+        </div>
+
+        <div class="graphBox4">
+            <div id="viz4"></div>
+            <p class="caption">Contrary to popular belief, hosting the Olympics does not always result in great
+                profits for the host country. An analysis of economic factors from 1964 to 2020 reveals a
+                different picture. The accompanying graph illustrates the financial outcomes, with green
+                indicating profit and red representing loss. The intensity of the shade indicates the magnitude
+                of the financial gain or loss experienced by each host country. Users can hover over a country to see details of its profit or loss. </p>
+        </div>
+
+        <div class="articleWrapper"> 
+            <p>
+                The concerns raised by opponents are not unfounded. Historical 
+                <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/CPQEHN" target="_blank">data</a>
+                indicates that only
+                three Olympics in the past six decades have managed to turn a profit: the 1984 Los Angeles
+                Games, the 1996 Atlanta Games, and the 2000 Sydney Games, as shown in green in the
+                graph above. On the other hand, Canada is painted the darkest red due to the largest losses
+                of $5.67 million in the 1976 Montreal Olympics. This is followed by a loss of $5.19 million in
+                the 2012 London Games.
+            </p>
+
+            <p>
+                To understand why certain Olympics have been profitable while others have faced
+                substantial losses, it's crucial to understand the financial dynamics of how the Games receive
+                and allocate funds.
+            </p>
+            
+            <p>
+                For much of the twentieth century, the staging of the Olympic Games was a manageable
+                burden for host cities. The events were held in developed countries, either in Europe or the
+                United States, and in the era before television broadcasting, hosts didn't expect to make a
+                profit. Instead, the games were publicly funded, with these advanced countries better
+                positioned to bear the costs due to their larger economies and more advanced
+                infrastructure.
+            </p>
+        </div>
+
+        <div class="graphBox5">
+            <!-- <div id="buttons-container" style="text-align: center;">
+                <button id="revenueBtn">Revenue</button>
+                <button id="costBtn">Costs</button>
+            </div> -->
+            <div id="viz5"></div>
+            <p class="caption">The graph shows the financial revenue and costs for hosting countries from 1964 to
+                2020. The green line indicates revenue and the red represents costs.</p>
+        </div>
+
+        <div class="articleWrapper"> 
+            <p>
+                However, since the 1970s when television broadcasting became a major factor, financing the
+                Games has evolved significantly. As depicted in the graph above, Olympic revenue began to
+                increase after 1972, surpassing $1 million for the first time in 1984. Today, the International
+                Olympic Committee (IOC) allocates funds generated from Olympic partnerships, suppliers,
+                and licensing programs to the host country's Olympics committee. Within the host country,
+                revenue from domestic sponsorships, ticket sales, licensing, and broadcasting also contribute
+                to overall income.
+            </p>
+
+            <p>
+                The 1976 Montreal Olympics are often synonymous with post-Olympics economic downfall.
+                Budgets soared, and debts related to the games skyrocketed. The main Olympics stadium,
+                initially budgeted to cost $250 million, ended up costing $1.4 billion and took 30 years to be
+                fully paid off, as 
+                <a href="https://www.investopedia.com/financial-edge/0912/the-best-and-worst-olympic-financial-planning.aspx" target="_blank">Investopedia</a>
+                reported.
+            </p>
+
+            <p>
+                Some argue that Quebec's 1980 referendum for independence from Canada was a fallout
+                from Montreal's financial troubles. The economic impact of the Montreal 1976 and Moscow
+                1980 Olympics led to the creation of Canada's national lottery, initially intended to help
+                repay Olympic debts.
+            </p>
+
+            <p>
+                Los Angeles 1984 took a different approach in contrast to the ambitious construction
+                projects and financial burdens of Montreal 1976 and Moscow 1980. It was privately funded,
+                with strict controls on spending. Rather than building new venues with extravagant designs,
+                organizers opted to use existing facilities, such as the Los Angeles Memorial Coliseum, which
+                also served as the Olympic Stadium in 1932. Only two new venues were constructed for the
+                1984 Games, both with the support of corporate sponsors: the Olympic Velodrome funded
+                by 7-Eleven and the Olympic Swim Stadium by McDonald's.
+            </p>
+            
+            <p>
+                Over a decade later, the Sydney Olympics in 2000 proved to be another financial success.
+                This highlighted the significant disparity between the success of hosting the Olympics and its
+                economic impact. Regarded as one of the most well-organized Games, Sydney showcased
+                exceptional infrastructure and sporting achievements.
+            </p>
+
+            <p>
+                Despite receiving global acclaim, Sydney residents questioned the long-term benefits of
+                hosting the Olympics. Like many hosts, the New South Wales state government exceeded its
+                budget, with total expenditure reaching about $5 billion at the start of the Games, $1 billion
+                of which came from public funds.
+            </p>
+
+            <p>
+                After the Olympics, the Olympic Park remained largely inactive as the government struggled
+                to redevelop it into a residential suburb. This plan did not materialize until 2005, by which
+                time the area had become more of a tourist attraction than a thriving community.
+            </p>
+        </div>
+
+        <p class="caption specific-caption">
+            This graph visually represents the countries that have hosted the Olympics, with each country's flag indicating the number of times it has served as a host. 
+        </p>
+
+        <div class="graphBox6">
+            <!-- <img src="assets/16pic_7185893_b.jpg" alt=""> -->
+            <div id="viz6-stickyBox">
+                <div id="viz6"></div>
+            </div>
+            <div class="articleWrapper"> 
+                <div id="viz1-stick-passersby">
+                    <p>It's evident that while some Olympics have a positive impact on their host countries, the
+                        financial risks associated with hosting remain significant. This has resulted in an uneven
+                        geographical distribution of host countries. Since the inception of the modern Olympics in
+                        1896, the majority of Games have been held in
+                        <span id="EuropeString" style="cursor: pointer;"><u><b>🔗 Europe</b></u></span> (30 editions) and 
+                        <span id="AmericasString" style="cursor: pointer;"><u><b>🔗 North America</b></u></span> (12
+                        editions), with eight Games in 
+                        <span id="AsiaString" style="cursor: pointer;"><u><b>🔗 Asia</b></u></span>
+                        and two in 
+                        <span id="OceaniaString" style="cursor: pointer;"><u><b>🔗 Oceania</b></u></span>. Rio de Janeiro made history as South
+                        America's first Olympic host city when it welcomed the 2016 Summer Olympics. Africa has
+                        yet to host an Olympic Games.
+                    </p> 
+                    <div class="spacer-100"></div>
+                    <div class="spacer-50"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="articleWrapper"> 
+            <p id="viz6-nextparagraph">Notably, the red flags in the graph above are mainly clustered in Europe and North America.
+                This is because the nine cities that have hosted the Games more than once are all located in
+                these two continents, with the exceptions of Tokyo and Beijing. It appears that, 128 years
+                later, the trend of hosting primarily in Europe and the Americas remains largely unchanged.
+            </p>  
+
+            <p>
+                But just as geography and finances shape who gets to host the Games, history and advocacy
+                have shaped who gets to compete in them—especially when it comes to gender.
+            </p>
+
+            <h3> 
+                The Athletes and the Overlooked
+            </h3>
+
+            <p>
+                In Paris 2024, for the first time, women athletes will make up exactly 50 percent of Olympic
+                Games participants, according to the 
+                <a href="https://olympics.com/en/news/paris-2024-first-games-to-achieve-full-gender-parity" target="_blank">IOC</a>
+            </p>
+
+            <p>
+                But equality at the Olympics, as in every other area of life, has had to be fought for and has
+                been achieved, not only through IOC initiatives but by the efforts of women's-rights groups,
+                women's sporting organizations, and individual women athletes.
+            </p>
+        </div>
+
+        <p class="caption specific-caption">
+            Gender equality is never easily achieved, especially in the Olympics participation.
+            This dynamic graph offers a historical overview of gender participation in the Summer
+            Olympics, with male athletes represented in blue and female athletes in pink. Each dot 
+            represents 10 athletes.
+        </p>
+
+        <div class="graphBox7">
+            <div id="sliderContainer" class="slider-container">
+                <input id="timeSlider" class="slider" type="range" min="0" max="28" step="1">
+            </div>
+            <div id="viz7-stickyBox">
+                <div id="viz7"></div>
+            </div>
+            <div class="articleWrapper"> 
+                <div id="viz1-stick-passersby">
+                    <!-- content that should pass while graph sticks goes here -->
+                    <p class="viz7-step1">
+                        When Baron Pierre de Coubertin founded the modern Olympic Games in 1896, he believed
+                        "an Olympiad with females would be impractical, uninteresting, unaesthetic and improper."
+                        However, by 1900, 12 women competed in tennis and golf events. Charlotte Cooper, a British
+                        tennis player, became the first woman to win an Olympic gold medal in 1900.
+                    </p>
+                    <div class="spacer-30"></div>
+                    <p class="viz7-step2">
+                        In 1920, 60 out of 2,692 competitors were women. The addition of the women's track 800
+                        meters event at the 1928 Games sparked controversy when several women collapsed at the
+                        finish line. Although Lina Radke won the race, the event was deemed too dangerous for
+                        women and was subsequently banned from the Olympics until being reintroduced in 1960.
+                    </p>   
+                    <div class="spacer-30"></div>
+                    <p class="viz7-step3">
+                        Feminist movements of the 1960s and early 1970s started advocating for greater equality,
+                        and women's participation began to increase significantly. In 1976, female participation
+                        jumped to over 20 percent for the first time.
+                    </p>
+                    <div class="spacer-30"></div>
+                    <p class="viz7-step4">
+                        The inclusion of women's boxing in the Olympics program made the 2012 Games in London
+                        the first where women competed in all sports. Since 1991, any new sport aiming to be
+                        included in the Olympics must include
+                        <a href="https://olympics.com/ioc/faq/history-and-origin-of-the-games/when-did-women-first-compete-in-the-olympic-games" target="_blank">women's competitions</a>.
+                    </p>
+                    <div class="spacer-50"></div>
+                    
+                    <p class="viz7-step5">
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="articleWrapper"> 
+            <p>
+                The proportion of female athletes continued to rise to a new high of 48% at Tokyo 2020,
+                where 5,386 women competed alongside 5,651 men. In addition to being the most gender-
+                balanced Summer Games to date, Tokyo 2020 introduced a rule change allowing one male
+                and one female athlete to jointly bear their flag during the opening ceremony. The IOC
+                <a href="https://olympics.com/ioc/gender-equality/gender-equality-through-time" target="_blank">reported</a>
+                reported that this change led to 91% of countries having a female flag bearer, significantly
+                enhancing the visibility of female athletes.
+            </p>
+            <p>
+                However, before applauding the advancements of women at the Games, work remains to be
+                done to achieve complete equality for women in the Olympics arena. Recently, Nike's new
+                <a href="https://twitter.com/CitiusMag/status/1778425681317187784" target="_blank">design</a>
+                for Team USA's female track and field athletes has sparked controversy. Athletes and
+                fans have criticized the bodysuit, which features a high-cut design on the hips, describing it
+                as uncomfortable, revealing, and potentially sexist.
+            </p>
+
+            <p>
+                Besides women, transgender athletes also face great hurdles in qualifying for the Olympics.
+                The IOC 
+                <a href="https://stillmed.olympics.com/media/Documents/Beyond-the-Games/Human-Rights/IOC-Framework-Fairness-Inclusion-Non-discrimination-2021.pdf" target="_blank">announced</a>
+                in January 2024 that to prevent unfair advantages, transgender athletes
+                must have completed their transition before the age of 12. Prior to this new regulation,
+                athletes who transitioned from female to male were allowed to compete without restriction
+                from 2016.
+            </p>
+
+            <p>
+                Compared to the first modern Olympics in 1896, the Games have made significant strides in
+                controlling financial grandiosity, enhancing female participation, and reducing carbon
+                emissions. However, threats from climate change, AI-enhanced doping, and competition
+                from esports persist. Despite these challenges, Thomas Bach, the IOC president, is optimistic
+                about the future of the Olympics.
+            </p>
+
+            <p>
+                "We have never been in such a favorable position," he told 
+                <a href="https://www.scmp.com/sport/other-sport/article/3260806/interest-hosting-olympic-games-never-so-high-says-international-olympic-committee-boss-thomas-bach" target="_blank">AFP</a>
+                in an April interview, "We
+                have never seen such a high interest in hosting the Olympic Games."
+            </p>
+            
+            <br>
+            <!-- <p style="text-align: center; font-style: italic; font-size: 18px;">Written by Meredith Lu and designed by Tina Ge</p> -->
+        </div>        
+        
     </div>
+
     
-    <script type="module" src="public/scripts/script1.js"></script>
-    <script type="module" src="public/scripts/script2.js"></script>
-    <script type="module" src="public/scripts/script3.js"></script>
-    <script type="module" src="public/scripts/script4.js"></script>
-    <script type="module" src="public/scripts/script5.js"></script>
-    <script type="module" src="public/scripts/script6.js"></script>
-    <script type="module" src="public/scripts/script7.js"></script>
+    
+    <!-- <div class="tooltip"></div> -->
+
+    <!-- <script type="module" src="script0.js"></script> -->
+    <script type="module" src="scripts/script1.js"></script>
+    <script type="module" src="scripts/script2.js"></script>
+    <script type="module" src="scripts/script3.js"></script>
+    <script type="module" src="scripts/script4.js"></script>
+    <script type="module" src="scripts/script5.js"></script>
+    <script type="module" src="scripts/script6.js"></script>
+    <script type="module" src="scripts/script7.js"></script>
 </body>
-</html> 
+</html>
