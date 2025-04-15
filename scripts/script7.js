@@ -92,19 +92,17 @@ function formatData(genderData, index){
 
 }
 function gotData(genderData){
-  document.querySelector("#timeSlider").addEventListener("change", function(e){
-    formatData(genderData, parseInt(e.target.value))
-    // console.log("target value", e.target.value)
-    // console.log(dataByTime);
-    
-    // dataIdx++
-  })
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector("#timeSlider").addEventListener("change", function(e){
+      formatData(genderData, parseInt(e.target.value))
+    });
 
     // Set the initial value of the slider to its minimum value
-  document.querySelector("#timeSlider").value = document.querySelector("#timeSlider").min;
+    document.querySelector("#timeSlider").value = document.querySelector("#timeSlider").min;
 
-  // Trigger the "change" event to update the visualization with data corresponding to the minimum value
-  document.querySelector("#timeSlider").dispatchEvent(new Event("change"));
+    // Trigger the "change" event to update the visualization with data corresponding to the minimum value
+    document.querySelector("#timeSlider").dispatchEvent(new Event("change"));
+  });
 
   enterView({
     selector: '.viz7-step1',
@@ -114,7 +112,7 @@ function gotData(genderData){
     exit: function(el) {
       formatData(genderData, 0)
     },
-    offset: 0.2, // enter at middle of viewport
+    offset: 0.2,
   });
 
   enterView({
@@ -125,7 +123,7 @@ function gotData(genderData){
     exit: function(el) {
       formatData(genderData, 1)
     },
-    offset: 0.2, // enter at middle of viewport
+    offset: 0.2,
   });
 
   enterView({
@@ -136,7 +134,7 @@ function gotData(genderData){
     exit: function(el) {
       formatData(genderData, 5)
     },
-    offset: 0.2, // enter at middle of viewport
+    offset: 0.2,
   });
 
   enterView({
@@ -147,7 +145,7 @@ function gotData(genderData){
     exit: function(el) {
       formatData(genderData, 17)
     },
-    offset: 0.2, // enter at middle of viewport
+    offset: 0.2,
   });
 
   enterView({
@@ -158,7 +156,7 @@ function gotData(genderData){
     exit: function(el) {
       formatData(genderData, 26)
     },
-    offset: 0.2, // enter at middle of viewport
+    offset: 0.2,
   });
 }
 

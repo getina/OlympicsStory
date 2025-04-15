@@ -150,35 +150,37 @@ function hide() {
   //   .remove();
 }
 
-document.getElementById("BahamasString").addEventListener("click", function(){
-  d3.selectAll("#viz3 .datagroup circle") // Select all circles
-    .transition() // Apply transition
-    .duration(300) // Set transition duration
-    .attr("fill", "white") // Change fill color to white
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("BahamasString").addEventListener("click", function(){
+    d3.selectAll("#viz3 .datagroup circle")
+      .transition()
+      .duration(300)
+      .attr("fill", "white")
 
-  d3.selectAll("#viz3 .datagroup") // Select all circles
-    .filter(d => d.country === "Bahamas") // Filter to select only circles associated with the United States
-    .select("circle") // Select the circles
-    .transition() // Apply transition
-    .delay(300) // Delay the transition to ensure it occurs after the reset
-    .duration(300) // Set transition duration
-    .attr("fill", "#fffdaf"); // Change the fill color to yellow
-})
+    d3.selectAll("#viz3 .datagroup")
+      .filter(d => d.country === "Bahamas")
+      .select("circle")
+      .transition()
+      .delay(300)
+      .duration(300)
+      .attr("fill", "#fffdaf");
+  });
 
-document.getElementById("USString").addEventListener("click", function(){
-  d3.selectAll("#viz3 .datagroup circle") // Select all circles
-    .transition() // Apply transition
-    .duration(300) // Set transition duration
-    .attr("fill", "white") // Change fill color to white
+  document.getElementById("USString").addEventListener("click", function(){
+    d3.selectAll("#viz3 .datagroup circle")
+      .transition()
+      .duration(300)
+      .attr("fill", "white")
 
-  d3.selectAll("#viz3 .datagroup") // Select all circles
-    .filter(d => d.country === "United States") // Filter to select only circles associated with the United States
-    .select("circle") // Select the circles
-    .transition() // Apply transition
-    .delay(300) // Delay the transition to ensure it occurs after the reset
-    .duration(300) // Set transition duration
-    .attr("fill", "#fffdaf"); // Change the fill color to yellow
-})
+    d3.selectAll("#viz3 .datagroup")
+      .filter(d => d.country === "United States")
+      .select("circle")
+      .transition()
+      .delay(300)
+      .duration(300)
+      .attr("fill", "#fffdaf");
+  });
+});
 
 let existing = true;
 
