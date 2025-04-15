@@ -6,43 +6,6 @@
     <title>An Olympic Odyssey of Medals and Metrics</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/enter-view"></script>
-
-    <!-- Meta Pixel base code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '615564874735648');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=615564874735648&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
-    <!-- Send page view to server for CAPI -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        fetch('/api/track', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                eventName: 'PageView',
-                eventData: {
-                    page_title: document.title,
-                    page_url: window.location.href
-                }
-            })
-        }).catch(error => console.error('Error sending event:', error));
-    });
-    </script>
 </head>
 <body>
     <div class="mainContainer">
@@ -82,7 +45,7 @@
             </p>
 
             <p>
-                What’s more, although the price tag of $13.2 billion for Rio de Janeiro to host the 2016
+                What's more, although the price tag of $13.2 billion for Rio de Janeiro to host the 2016
                 Olympics resulted in protests about wasteful spending and a misallocation of resources,
                 London actually spent almost two billion more as host city four years prior.
             </p>
@@ -93,7 +56,7 @@
             </p>
             
             <p>
-                The Olympic Games are renowned as one of the world’s top sporting events, featuring over
+                The Olympic Games are renowned as one of the world's top sporting events, featuring over
                 10,000 athletes from more than 200 countries competing in over 300 individual events
                 across 28 sports every four years. With over 10 million tickets sold and a global TV audience
                 in the billions, the Olympics are not just a sports spectacle but also a socio-cultural
@@ -131,7 +94,7 @@
             </div>
 
             <p class="caption">Since it was first held in Athens, Greece, in 1896, The modern Olympic Games are
-                considered the world’s foremost sports competition with more than 200 teams, representing
+                considered the world's foremost sports competition with more than 200 teams, representing
                 sovereign states and territories, participating. The graph shows the medals won by each
                 participating country in the Summer Games from 1896 to 2020.</p>
         </div>
@@ -148,7 +111,7 @@
             </p>
 
             <p>
-                The alternative medal tables below track countries’ Olympic performances not only by their
+                The alternative medal tables below track countries' Olympic performances not only by their
                 total medal haul but also by taking into account their gross domestic product (GDP) and
                 population size.
             </p>
@@ -157,19 +120,19 @@
                 Researchers have 
                 <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2016.00915.x" target="_blank">found</a>
                 that factors like GDP per capita, population size, and previous
-                Olympic medal counts could account for approximately 95% of the variation in countries’
-                final medal counts. This provides a baseline for evaluating whether a country’s performance
+                Olympic medal counts could account for approximately 95% of the variation in countries'
+                final medal counts. This provides a baseline for evaluating whether a country's performance
                 met, exceeded, or fell below expectations.
             </p>
 
             <p>
                 GDP, a monetary measure of the market value of all the final goods and services produced
-                and rendered in a year by a country, is often used by a country’s government to measure its
+                and rendered in a year by a country, is often used by a country's government to measure its
                 economic health.
             </p>
 
             <p>
-                While GDP alone doesn’t directly influence an athlete’s performance, it serves as an indicator
+                While GDP alone doesn't directly influence an athlete's performance, it serves as an indicator
                 of factors that do. In wealthy countries, people have more financial resources to support
                 professional athletes and more time to dedicate to leisure activities, resulting in improved
                 sports infrastructure and more effective training opportunities.
