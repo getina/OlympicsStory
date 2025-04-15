@@ -205,5 +205,3 @@ enterView({
 });
 
 // d3.csv("medalsPerCapita.csv").then(gotData)
-
-
