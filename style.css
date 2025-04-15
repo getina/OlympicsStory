@@ -16,10 +16,20 @@
     margin-right: 5vw;
 }
 
-/* Only hide the heading initially */
-/* .heading {
-    opacity: 0;
-} */
+@media (max-width: 500px) {
+    .image-container img {
+        max-width: 50vw;
+        max-height: 150px;
+    }
+
+    .heading h1 {
+        font-size: clamp(18px, 5vw, 26px);
+    }
+
+    .heading h4 {
+        font-size: clamp(14px, 3.5vw, 18px);
+    }
+}
 
 /* Apply fade-in animation */
 .fade-in {
@@ -88,10 +98,12 @@ img{
 
 /* graph 1 */
 
-#viz1 {
-    width: 80%;
-    max-width: 680px;
-    margin-top: -50px;
+#graphScrollbarWrapper{
+    aspect-ratio: 1.72;
+    display: flex;
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
 }
 
 #sideView {
@@ -99,12 +111,8 @@ img{
     max-width: 170px;
 }
 
-#graphScrollbarWrapper{
-    aspect-ratio: 1.72;
-    display: flex;
-    width: 100%;
-    max-width: 850px;
-    margin: auto;
+#viz1 {
+    width: 100%; /* fill wrapper */
 }
 
 /* graph 2 */
