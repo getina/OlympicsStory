@@ -185,15 +185,12 @@ let existing = true;
 enterView({
   selector: '.graphBox3',
   enter: function(el) {
-    // console.log("this is supposed to hapen")
     d3.csv("datasets/medalsPerCapita.csv").then(gotData)
-    // exisiting = true
   },
   exit: function(el) {
     hide()
-    // exisiting = false
   },
-  offset: 0.2, // enter at bottom of viewport
+  offset: 0.2,
 });
 
 enterView({
@@ -202,10 +199,9 @@ enterView({
     hide()
   },
   exit: function(el) {
-    // console.log("this is nOT")
     d3.csv("datasets/medalsPerCapita.csv").then(gotData)
   },
-  offset: 1, // enter at bottom of viewport
+  offset: 0.7,
 });
 
 // d3.csv("medalsPerCapita.csv").then(gotData)
