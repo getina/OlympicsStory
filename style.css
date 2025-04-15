@@ -130,14 +130,7 @@ img{
 .specific-caption {
     margin-bottom: 10px; /* Adjust the margin-bottom value as needed */
 }
-
-/* graph 5 */
-
-#viz5 svg {
-    margin-top: -100px; 
-    margin-bottom: -70px;
-}
-
+  
 /* graph 7 */
 .slider-container {
     display: flex;

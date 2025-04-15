@@ -1,9 +1,9 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 let w = 600;
-let h = 350;
+let h = 275;
 let xpadding = 120;
-let ypadding = 75;
+let ypadding = 40;
 
 let vizContainer = d3.select("#viz5");
 
@@ -74,7 +74,7 @@ function gotData(incomingData){
   viz.append("text")
   .attr("class", "xAxisLabel")
   .attr("x", w / 2)
-  .attr("y", h - 40) // Adjust the y-coordinate as needed
+  .attr("y", h) // Adjust the y-coordinate as needed
   .style("font-size", "12px") // Set the font size to 16 pixels
   .style("text-anchor", "middle")
   .text("Years");
@@ -110,9 +110,6 @@ function gotData(incomingData){
   let groupedDataFLAT = groupedData.map(function(d){
     return d[1]
   })
-//   console.log("gRRRRR", groupedDataFLAT)
-
-  
 
   // d3.line() returns a function that produces
   // path element's d strings for us.
