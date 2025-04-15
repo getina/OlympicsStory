@@ -168,8 +168,8 @@ function gotData(geoData, profitData){
     });
 }
 
-d3.json("countries.geo.json").then(function(geoData){
-  d3.csv("datasets/financials.csv").then(function(profitData){
+d3.json("./countries.geo.json").then(function(geoData){
+  d3.csv("./datasets/financials.csv").then(function(profitData){
     gotData(geoData, profitData)
   })
 });

@@ -185,7 +185,7 @@ let existing = true;
 enterView({
   selector: '.graphBox3',
   enter: function(el) {
-    d3.csv("datasets/medalsPerCapita.csv").then(gotData)
+    d3.csv("./datasets/medalsPerCapita.csv").then(gotData)
   },
   exit: function(el) {
     hide()
@@ -199,9 +199,7 @@ enterView({
     hide()
   },
   exit: function(el) {
-    d3.csv("datasets/medalsPerCapita.csv").then(gotData)
+    d3.csv("./datasets/medalsPerCapita.csv").then(gotData)
   },
   offset: 0.7,
 });
-
-// d3.csv("medalsPerCapita.csv").then(gotData)
