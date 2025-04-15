@@ -193,7 +193,7 @@ enterView({
     hide()
     // exisiting = false
   },
-  offset: 0.5, // enter at middle of viewport
+  offset: 0.2, // enter at bottom of viewport
 });
 
 enterView({
@@ -205,7 +205,7 @@ enterView({
     // console.log("this is nOT")
     d3.csv("datasets/medalsPerCapita.csv").then(gotData)
   },
-  offset: 0.5, // enter at middle of viewport
+  offset: 1, // enter at bottom of viewport
 });
 
 // d3.csv("medalsPerCapita.csv").then(gotData)

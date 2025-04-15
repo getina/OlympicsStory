@@ -112,37 +112,6 @@ function gotData(medalData, gdpData, countryName){
 
   // console.log(tooltip)
 
-
-  datagroups.append("circle")
-    // .attr("cx", getLocation)
-    .attr("cx", 0) 
-    .attr("cy", 0) 
-    .attr("r", 4)
-
-  
-    .on("mouseover", function(event, d) {
-      d3.select(this).attr("fill", "red"); // Change the fill color to red when hovering over
-      tooltip
-          .style("opacity", .9)
-          .style("left", event.pageX + "px") // Adjust the offset as needed
-          .style("top", event.pageY + 20 + "px"); // Adjust the offset as needed
-  
-      tooltip.html("Year: " + d.year.getFullYear() + "<br/>" + "Medals: " + d.medals);
-    })
-
-    .on("mouseout", function() {
-      d3.select(this).attr("fill", "black"); // Change the fill color back to blue when mouse moves out
-      tooltip.transition()
-          .duration(500) // Duration of the transition in milliseconds
-          .style("opacity", 0)
-    });
-
-
-  // let groupedData = [finalData]
-  
-
-  // console.log(groupedData)
-
   let nestedData = d3.group(finalData, d => d.countryName);
   let graphGroup = viz.append("g").attr("class", "graphGroup");
   
@@ -173,6 +142,28 @@ function gotData(medalData, gdpData, countryName){
     let y = yScale(d.medals)
     return "translate("+x+", "+y+")"
   }
+
+  datagroups.append("circle")
+    .attr("cx", 0) 
+    .attr("cy", 0) 
+    .attr("r", 4)
+    .style("z-index", 10) // Add z-index to ensure circles are on top
+    .on("mouseover", function(event, d) {
+      d3.select(this).attr("fill", "red"); // Change the fill color to red when hovering over
+      tooltip
+          .style("opacity", .9)
+          .style("left", event.pageX + "px") // Adjust the offset as needed
+          .style("top", event.pageY + 20 + "px"); // Adjust the offset as needed
+  
+      tooltip.html("Year: " + d.year.getFullYear() + "<br/>" + "Medals: " + d.medals);
+    })
+
+    .on("mouseout", function() {
+      d3.select(this).attr("fill", "black"); // Change the fill color back to blue when mouse moves out
+      tooltip.transition()
+          .duration(500) // Duration of the transition in milliseconds
+          .style("opacity", 0)
+    });
 
   datagroups.attr("transform", getGroupPosition)
 

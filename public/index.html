@@ -7,6 +7,42 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/enter-view"></script>
 
+    <!-- Meta Pixel base code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '615564874735648');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=615564874735648&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Send page view to server for CAPI -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/api/track', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                eventName: 'PageView',
+                eventData: {
+                    page_title: document.title,
+                    page_url: window.location.href
+                }
+            })
+        }).catch(error => console.error('Error sending event:', error));
+    });
+    </script>
 </head>
 <body>
     <div class="mainContainer">
@@ -20,7 +56,7 @@
                         <div class="heading fade-in">
                             <h1>An Olympic Odyssey of Medals and Metrics</h1>
                             <h4>A Data-Driven Dive into the Olympics</h4>
-                            <p style="font-size: 18px;">✍️ by Meredith Lu and 👩‍💻 by Tina Ge</p>
+                            <p>✍️ by Meredith Lu and 👩‍💻 by Tina Ge</p>
                         </div>
                     <!-- </div>    -->
                 </div>
@@ -50,6 +86,11 @@
                 Olympics resulted in protests about wasteful spending and a misallocation of resources,
                 London actually spent almost two billion more as host city four years prior.
             </p>
+
+            <p>
+                As these snapshots show, the Olympic Games are shaped not only by athletic performance
+                but also by broader historical, economic, and social forces.
+            </p>
             
             <p>
                 The Olympic Games are renowned as one of the world’s top sporting events, featuring over
@@ -68,6 +109,12 @@
             <h3> 
                 The Winners and the Alternative Winners
             </h3>
+
+            <p>
+                One of the clearest ways to understand these forces at play is by examining the medal
+                tables—not just the traditional rankings, but also alternative ones that challenge our
+                assumptions about what success really looks like.
+            </p>
 
             <p>
                 Even before the first event started in Paris this summer of 2024, it was almost certain that
@@ -98,12 +145,12 @@
                 economic strength, and previous achievements. Typically, larger and wealthier countries
                 dominate the rankings, while smaller nations that perform exceptionally well in relation to
                 their size receive less recognition.
-
             </p>
 
             <p>
                 The alternative medal tables below track countries’ Olympic performances not only by their
-                total medal haul but also by taking into account their gross domestic product (GDP) per capita.
+                total medal haul but also by taking into account their gross domestic product (GDP) and
+                population size.
             </p>
 
             <p>
@@ -122,7 +169,7 @@
             </p>
 
             <p>
-                While GDP per capita alone doesn’t directly influence an athlete’s performance, it serves as an indicator
+                While GDP alone doesn’t directly influence an athlete’s performance, it serves as an indicator
                 of factors that do. In wealthy countries, people have more financial resources to support
                 professional athletes and more time to dedicate to leisure activities, resulting in improved
                 sports infrastructure and more effective training opportunities.
@@ -131,9 +178,9 @@
 
         <div class="graphBox2">
             <div id="viz2"></div>
-            <p class="caption">Numerous factors can influence a country’s performance at the Olympics, including
+            <p class="caption">Numerous factors can influence a country's performance at the Olympics, including
                 economic resources, population size, government investment, sports culture, and tradition.
-                This graph examines the relationship between a country’s Gross Domestic Product (GDP) per capita and
+                This graph examines the relationship between a country's Gross Domestic Product (GDP) per capita and
                 its total medals won in the Summer Olympics from 1960 to 2020, shedding light on how
                 economic factors may impact Olympic success.</p>
         </div>
@@ -142,7 +189,7 @@
             <p>
                 These influences are demonstrated by the presence of wealthy nations in the top right
                 quadrant of the graph. Countries like the United States, Great Britain, Germany, and
-                Australia, boasting some of the world’s strongest economies, naturally feature among the
+                Australia, boasting some of the world's strongest economies, naturally feature among the
                 top 10 performers in Olympic history.
             </p>
 
@@ -161,8 +208,8 @@
                 nations to have earned more medals at the Winter Games than at the Summer Games.
 
             </p>
-                The key to Norway’s success extends beyond its cold climate and mountainous terrain. The
-                country’s strong emphasis on grassroots participation in winter sports from an early age is
+                The key to Norway's success extends beyond its cold climate and mountainous terrain. The
+                country's strong emphasis on grassroots participation in winter sports from an early age is
                 crucial. According to 
                 <a href="https://www.theguardian.com/sport/2022/feb/17/secret-behind-norway-winter-olympic-success" target="_blank">The Guardian</a>,
                 an estimated 93% of children regularly participate in
@@ -176,7 +223,7 @@
             <p>
                 Successful Olympic nations typically excel in a select few disciplines, maximizing their medal
                 count in those areas. The United States, for example, leads in overall medals for swimming,
-                athletics, and shooting. Similarly, China’s success is concentrated in specific sports, notably
+                athletics, and shooting. Similarly, China's success is concentrated in specific sports, notably
                 gymnastics, diving, and shooting, which has yielded the most medals for the country. China
                 also boasts more gold medals in table tennis (36 golds) and badminton (20 golds) than any
                 other nation.
@@ -185,16 +232,16 @@
             <p>
                 China has pursued a state-driven approach to international sports competitions, focusing on
                 enhancing athletic success through governmental policies and programs. The Olympic Glory-
-                winning Program Guidelines 2001-2010, introduced by China’s General Administration of
+                winning Program Guidelines 2001-2010, introduced by China's General Administration of
                 Sports (GASC) in 2002, exemplifies this strategy. The program aimed for China to secure a
-                top-three ranking in medal count at the 2008 Olympics, with “Project 119” specifically
+                top-three ranking in medal count at the 2008 Olympics, with "Project 119" specifically
                 targeting sports where China had historically underperformed, such as swimming and
                 rowing, according to 
                 <a href="https://chinapower.csis.org/dominant-china-olympic-games/" target="_blank">ChinaPower Project</a>.
             </p>
 
             <p>
-                China’s approach is also heavily supported financially. In 2021, GASC had a budget of
+                China's approach is also heavily supported financially. In 2021, GASC had a budget of
                 approximately $1 billion (RMB 6.4 billion). In contrast, Australia, known for its strong
                 performance at the Summer Olympics, allocated only $124 million to the Australian Sports
                 Commission for the 2020-2021 period. The United States, which does not have government-
@@ -204,13 +251,13 @@
 
             <p>
                 The recruitment of athletes in China is also part of this top-down system. Children as young
-                as four years old are identified and trained through China’s extensive network of over 2,000
-                state-run sports academies. While this approach has contributed to China’s success in
+                as four years old are identified and trained through China's extensive network of over 2,000
+                state-run sports academies. While this approach has contributed to China's success in
                 winning medals, it has drawn criticism internationally. Some foreign observers have raised
                 concerns about the physical and mental toll these academies impose on young athletes. Tom
-                Terhaar, former head coach of the U.S. Women’s Rowing Team, once
+                Terhaar, former head coach of the U.S. Women's Rowing Team, once
                 <a href="https://www.nytimes.com/2008/06/01/sports/olympics/01gold.html?mtrref=www.google.com" target="_blank">described</a>
-                Chinese athletes as “robots with all the resources they could ever ask for.”
+                Chinese athletes as "robots with all the resources they could ever ask for."
             </p>
         </div>
 
@@ -238,9 +285,14 @@
             </h3>
 
             <p>
+                While performance on the podium is one metric of Olympic success, another lies in what
+                happens off the field: the economic stakes and consequences of hosting the Games.
+            </p>
+
+            <p>
                 The opening ceremony of the Paris 2024 Olympics is taking place in less than 100 days. The
                 calculations and evaluations of what economic influence these games would have on the
-                world’s top tourist destination, however, had started long before.
+                world's top tourist destination, however, had started long before.
             </p>
 
             <p>
@@ -289,14 +341,14 @@
 
             <p>
                 To understand why certain Olympics have been profitable while others have faced
-                substantial losses, it’s crucial to understand the financial dynamics of how the Games receive
+                substantial losses, it's crucial to understand the financial dynamics of how the Games receive
                 and allocate funds.
             </p>
             
             <p>
                 For much of the twentieth century, the staging of the Olympic Games was a manageable
                 burden for host cities. The events were held in developed countries, either in Europe or the
-                United States, and in the era before television broadcasting, hosts didn’t expect to make a
+                United States, and in the era before television broadcasting, hosts didn't expect to make a
                 profit. Instead, the games were publicly funded, with these advanced countries better
                 positioned to bear the costs due to their larger economies and more advanced
                 infrastructure.
@@ -319,7 +371,7 @@
                 Games has evolved significantly. As depicted in the graph above, Olympic revenue began to
                 increase after 1972, surpassing $1 million for the first time in 1984. Today, the International
                 Olympic Committee (IOC) allocates funds generated from Olympic partnerships, suppliers,
-                and licensing programs to the host country’s Olympics committee. Within the host country,
+                and licensing programs to the host country's Olympics committee. Within the host country,
                 revenue from domestic sponsorships, ticket sales, licensing, and broadcasting also contribute
                 to overall income.
             </p>
@@ -334,9 +386,9 @@
             </p>
 
             <p>
-                Some argue that Quebec’s 1980 referendum for independence from Canada was a fallout
-                from Montreal’s financial troubles. The economic impact of the Montreal 1976 and Moscow
-                1980 Olympics led to the creation of Canada’s national lottery, initially intended to help
+                Some argue that Quebec's 1980 referendum for independence from Canada was a fallout
+                from Montreal's financial troubles. The economic impact of the Montreal 1976 and Moscow
+                1980 Olympics led to the creation of Canada's national lottery, initially intended to help
                 repay Olympic debts.
             </p>
 
@@ -347,7 +399,7 @@
                 organizers opted to use existing facilities, such as the Los Angeles Memorial Coliseum, which
                 also served as the Olympic Stadium in 1932. Only two new venues were constructed for the
                 1984 Games, both with the support of corporate sponsors: the Olympic Velodrome funded
-                by 7-Eleven and the Olympic Swim Stadium by McDonald’s.
+                by 7-Eleven and the Olympic Swim Stadium by McDonald's.
             </p>
             
             <p>
@@ -372,7 +424,7 @@
         </div>
 
         <p class="caption specific-caption">
-            This graph visually represents the countries that have hosted the Olympics, with each country’s flag indicating the number of times it has served as a host. 
+            This graph visually represents the countries that have hosted the Olympics, with each country's flag indicating the number of times it has served as a host. 
         </p>
 
         <div class="graphBox6">
@@ -382,7 +434,7 @@
             </div>
             <div class="articleWrapper"> 
                 <div id="viz1-stick-passersby">
-                    <p>It’s evident that while some Olympics have a positive impact on their host countries, the
+                    <p>It's evident that while some Olympics have a positive impact on their host countries, the
                         financial risks associated with hosting remain significant. This has resulted in an uneven
                         geographical distribution of host countries. Since the inception of the modern Olympics in
                         1896, the majority of Games have been held in
@@ -392,7 +444,7 @@
                         <span id="AsiaString" style="cursor: pointer;"><u><b>🔗 Asia</b></u></span>
                         and two in 
                         <span id="OceaniaString" style="cursor: pointer;"><u><b>🔗 Oceania</b></u></span>. Rio de Janeiro made history as South
-                        America’s first Olympic host city when it welcomed the 2016 Summer Olympics. Africa has
+                        America's first Olympic host city when it welcomed the 2016 Summer Olympics. Africa has
                         yet to host an Olympic Games.
                     </p> 
                     <div class="spacer-100"></div>
@@ -408,6 +460,11 @@
                 later, the trend of hosting primarily in Europe and the Americas remains largely unchanged.
             </p>  
 
+            <p>
+                But just as geography and finances shape who gets to host the Games, history and advocacy
+                have shaped who gets to compete in them—especially when it comes to gender.
+            </p>
+
             <h3> 
                 The Athletes and the Overlooked
             </h3>
@@ -420,8 +477,8 @@
 
             <p>
                 But equality at the Olympics, as in every other area of life, has had to be fought for and has
-                been achieved, not only through IOC initiatives but by the efforts of women’s-rights groups,
-                women’s sporting organizations, and individual women athletes.
+                been achieved, not only through IOC initiatives but by the efforts of women's-rights groups,
+                women's sporting organizations, and individual women athletes.
             </p>
         </div>
 
@@ -445,13 +502,13 @@
                     <!-- content that should pass while graph sticks goes here -->
                     <p class="viz7-step1">
                         When Baron Pierre de Coubertin founded the modern Olympic Games in 1896, he believed
-                        “an Olympiad with females would be impractical, uninteresting, unaesthetic and improper.”
+                        "an Olympiad with females would be impractical, uninteresting, unaesthetic and improper."
                         However, by 1900, 12 women competed in tennis and golf events. Charlotte Cooper, a British
                         tennis player, became the first woman to win an Olympic gold medal in 1900.
                     </p>
                     <div class="spacer-30"></div>
                     <p class="viz7-step2">
-                        In 1920, 60 out of 2,692 competitors were women. The addition of the women’s track 800
+                        In 1920, 60 out of 2,692 competitors were women. The addition of the women's track 800
                         meters event at the 1928 Games sparked controversy when several women collapsed at the
                         finish line. Although Lina Radke won the race, the event was deemed too dangerous for
                         women and was subsequently banned from the Olympics until being reintroduced in 1960.
@@ -459,15 +516,15 @@
                     <div class="spacer-30"></div>
                     <p class="viz7-step3">
                         Feminist movements of the 1960s and early 1970s started advocating for greater equality,
-                        and women’s participation began to increase significantly. In 1976, female participation
+                        and women's participation began to increase significantly. In 1976, female participation
                         jumped to over 20 percent for the first time.
                     </p>
                     <div class="spacer-30"></div>
                     <p class="viz7-step4">
-                        The inclusion of women’s boxing in the Olympics program made the 2012 Games in London
+                        The inclusion of women's boxing in the Olympics program made the 2012 Games in London
                         the first where women competed in all sports. Since 1991, any new sport aiming to be
                         included in the Olympics must include
-                        <a href="https://olympics.com/ioc/faq/history-and-origin-of-the-games/when-did-women-first-compete-in-the-olympic-games" target="_blank">women’s competitions</a>.
+                        <a href="https://olympics.com/ioc/faq/history-and-origin-of-the-games/when-did-women-first-compete-in-the-olympic-games" target="_blank">women's competitions</a>.
                     </p>
                     <div class="spacer-50"></div>
                     
@@ -490,9 +547,9 @@
             </p>
             <p>
                 However, before applauding the advancements of women at the Games, work remains to be
-                done to achieve complete equality for women in the Olympics arena. Recently, Nike’s new
+                done to achieve complete equality for women in the Olympics arena. Recently, Nike's new
                 <a href="https://twitter.com/CitiusMag/status/1778425681317187784" target="_blank">design</a>
-                for Team USA’s female track and field athletes has sparked controversy. Athletes and
+                for Team USA's female track and field athletes has sparked controversy. Athletes and
                 fans have criticized the bodysuit, which features a high-cut design on the hips, describing it
                 as uncomfortable, revealing, and potentially sexist.
             </p>
@@ -516,10 +573,10 @@
             </p>
 
             <p>
-                “We have never been in such a favorable position,” he told 
+                "We have never been in such a favorable position," he told 
                 <a href="https://www.scmp.com/sport/other-sport/article/3260806/interest-hosting-olympic-games-never-so-high-says-international-olympic-committee-boss-thomas-bach" target="_blank">AFP</a>
-                in an April interview, “We
-                have never seen such a high interest in hosting the Olympic Games.”
+                in an April interview, "We
+                have never seen such a high interest in hosting the Olympic Games."
             </p>
             
             <br>
