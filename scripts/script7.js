@@ -92,17 +92,15 @@ function formatData(genderData, index){
 
 }
 function gotData(genderData){
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector("#timeSlider").addEventListener("change", function(e){
-      formatData(genderData, parseInt(e.target.value))
-    });
-
-    // Set the initial value of the slider to its minimum value
-    document.querySelector("#timeSlider").value = document.querySelector("#timeSlider").min;
-
-    // Trigger the "change" event to update the visualization with data corresponding to the minimum value
-    document.querySelector("#timeSlider").dispatchEvent(new Event("change"));
+  document.querySelector("#timeSlider").addEventListener("change", function(e){
+    formatData(genderData, parseInt(e.target.value))
   });
+
+  // Set the initial value of the slider to its minimum value
+  document.querySelector("#timeSlider").value = document.querySelector("#timeSlider").min;
+
+  // Trigger the "change" event to update the visualization with data corresponding to the minimum value
+  document.querySelector("#timeSlider").dispatchEvent(new Event("change"));
 
   enterView({
     selector: '.viz7-step1',

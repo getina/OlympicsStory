@@ -305,45 +305,44 @@ function gotData(geoData, rehostData) {
       );  
   }   
 
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("OceaniaString").addEventListener("click", function(){
-      countryShapes.transition().attr("fill", "white");
-      let countriesFocus = ["Australia"]
-      let countryData = geoData.features.find(d=>d.properties.admin == "Australia")
-      const [[x0, y0], [x1, y1]] = pathMaker.bounds(countryData);
-      zoomToCountry("Australia", countriesFocus, [[x0, y0], [x1, y1]]);
-    });
-
-    document.getElementById("AsiaString").addEventListener("click", function(){
-      countryShapes.transition().attr("fill", "white");
-      let countriesFocus = ["China", "Japan", "South Korea"]
-      let countryData = geoData.features.find(d=>d.properties.admin == "China")
-      const [[x0, y0], [x1, y1]] = pathMaker.bounds(countryData);
-      zoomToCountry("China", countriesFocus, [[x0, y0], [x1, y1]]);
-    });
-
-    document.getElementById("EuropeString").addEventListener("click", function(){
-      countryShapes.transition().attr("fill", "white");
-      let countriesFocus = ["Germany", "Greece", "France", "United Kingdom", "Sweden", "Belgium", "Switzerland", "Netherlands", "Italy", "Spain", "Austria", "Norway", "Finland", "Russia"]
-      let countryData = geoData.features.find(d=>d.properties.admin == "Germany")
-      const [[x0, y0], [x1, y1]] = pathMaker.bounds(countryData);
-      zoomToCountry("Germany", countriesFocus, [[x0, y0], [x1, y1]]);
-    });
-
-    document.getElementById("AmericasString").addEventListener("click", function(){
-      countryShapes.transition().attr("fill", "white");
-      let countriesFocus = ["United States of America", "Canada", "Mexico"]
-      let nyLon = -52.623913;
-      let nyLat = 83.1068;
-      let calLon = -140;
-      let calLat = 15;
-      let x0 = projection([nyLon,nyLat])[0];
-      let y0 = projection([nyLon,nyLat])[1];
-      let x1 = projection([calLon,calLat])[0];
-      let y1 = projection([calLon,calLat])[1];
-      zoomToCountry("United States of America", countriesFocus, [[x0, y0], [x1, y1]]);
-    });
+  document.getElementById("OceaniaString").addEventListener("click", function(){
+    countryShapes.transition().attr("fill", "white");
+    let countriesFocus = ["Australia"]
+    let countryData = geoData.features.find(d=>d.properties.admin == "Australia")
+    const [[x0, y0], [x1, y1]] = pathMaker.bounds(countryData);
+    zoomToCountry("Australia", countriesFocus, [[x0, y0], [x1, y1]]);
   });
+
+  document.getElementById("AsiaString").addEventListener("click", function(){
+    countryShapes.transition().attr("fill", "white");
+    let countriesFocus = ["China", "Japan", "South Korea"]
+    let countryData = geoData.features.find(d=>d.properties.admin == "China")
+    const [[x0, y0], [x1, y1]] = pathMaker.bounds(countryData);
+    zoomToCountry("China", countriesFocus, [[x0, y0], [x1, y1]]);
+  });
+
+  document.getElementById("EuropeString").addEventListener("click", function(){
+    countryShapes.transition().attr("fill", "white");
+    let countriesFocus = ["Germany", "Greece", "France", "United Kingdom", "Sweden", "Belgium", "Switzerland", "Netherlands", "Italy", "Spain", "Austria", "Norway", "Finland", "Russia"]
+    let countryData = geoData.features.find(d=>d.properties.admin == "Germany")
+    const [[x0, y0], [x1, y1]] = pathMaker.bounds(countryData);
+    zoomToCountry("Germany", countriesFocus, [[x0, y0], [x1, y1]]);
+  });
+
+  document.getElementById("AmericasString").addEventListener("click", function(){
+    countryShapes.transition().attr("fill", "white");
+    let countriesFocus = ["United States of America", "Canada", "Mexico"]
+    let nyLon = -52.623913;
+    let nyLat = 83.1068;
+    let calLon = -140;
+    let calLat = 15;
+    let x0 = projection([nyLon,nyLat])[0];
+    let y0 = projection([nyLon,nyLat])[1];
+    let x1 = projection([calLon,calLat])[0];
+    let y1 = projection([calLon,calLat])[1];
+    zoomToCountry("United States of America", countriesFocus, [[x0, y0], [x1, y1]]);
+  });
+  
 
   enterView({
     selector: '#viz6-stickyBox',

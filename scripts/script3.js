@@ -150,36 +150,34 @@ function hide() {
   //   .remove();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById("BahamasString").addEventListener("click", function(){
-    d3.selectAll("#viz3 .datagroup circle")
-      .transition()
-      .duration(300)
-      .attr("fill", "white")
+document.getElementById("BahamasString").addEventListener("click", function(){
+  d3.selectAll("#viz3 .datagroup circle")
+    .transition()
+    .duration(300)
+    .attr("fill", "white")
 
-    d3.selectAll("#viz3 .datagroup")
-      .filter(d => d.country === "Bahamas")
-      .select("circle")
-      .transition()
-      .delay(300)
-      .duration(300)
-      .attr("fill", "#fffdaf");
-  });
+  d3.selectAll("#viz3 .datagroup")
+    .filter(d => d.country === "Bahamas")
+    .select("circle")
+    .transition()
+    .delay(300)
+    .duration(300)
+    .attr("fill", "#fffdaf");
+});
 
-  document.getElementById("USString").addEventListener("click", function(){
-    d3.selectAll("#viz3 .datagroup circle")
-      .transition()
-      .duration(300)
-      .attr("fill", "white")
+document.getElementById("USString").addEventListener("click", function(){
+  d3.selectAll("#viz3 .datagroup circle")
+    .transition()
+    .duration(300)
+    .attr("fill", "white")
 
-    d3.selectAll("#viz3 .datagroup")
-      .filter(d => d.country === "United States")
-      .select("circle")
-      .transition()
-      .delay(300)
-      .duration(300)
-      .attr("fill", "#fffdaf");
-  });
+  d3.selectAll("#viz3 .datagroup")
+    .filter(d => d.country === "United States")
+    .select("circle")
+    .transition()
+    .delay(300)
+    .duration(300)
+    .attr("fill", "#fffdaf");
 });
 
 let existing = true;
