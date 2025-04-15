@@ -1,7 +1,7 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-let w = 900;
-let h = 600;
+let w = 800;
+let h = 400;
     
 let vizContainer = d3.select("#viz3");
 
@@ -16,11 +16,11 @@ let viz = vizContainer
 ;
 
 function getX(d){
-  return Math.random() * (w - 100) + 50
+  return Math.random() * (w - 20) + 10;
 }
 
 function getY(d){
-  return Math.random() * (h - 100) + 50
+  return Math.random() * (h - 20) + 10;
 }
 
 
@@ -30,17 +30,13 @@ function gotData(medalData){
   medalData = medalData.map(d => {
     return {country: d.Country, weight: parseFloat(d.Gold), x:getX(d), y:getY(d)}
   })
-
-  // console.log(medalData)
-
-
   // min max Population
   let weightExtent = d3.extent(medalData, function(d, i){
     return d.weight;
   });
 
   // you may use this scale to define a radius for the circles
-  let rScale = d3.scaleLinear().domain(weightExtent).range([5, 120]);
+  let rScale = d3.scaleLinear().domain(weightExtent).range([5, 80]);
 
 
   let datagroups = vizGroup.selectAll(".datagroup").data(medalData).enter().append("g")
