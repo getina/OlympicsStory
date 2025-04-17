@@ -60,7 +60,7 @@ function gotData(medalData, gdpData, countryName){
   xAxisGroup.call(xAxis)
     .selectAll("text")
     .style("fill", "black"); // Set x-axis label color to black
-  xAxisGroup.attr("transform", "translate(10," + (h-90) + ")")
+  xAxisGroup.attr("transform", "translate(10," + (h-120) + ")")
   xAxisGroup.selectAll("path, line")
     .style("stroke", "black"); // Set x-axis line color to black
 
@@ -69,7 +69,7 @@ function gotData(medalData, gdpData, countryName){
   yAxisGroup.call(yAxis)
     .selectAll("text")
     .style("fill", "black"); // Set x-axis label color to black
-  yAxisGroup.attr("transform", "translate(50,7)")
+  yAxisGroup.attr("transform", "translate(50,-20)")
   yAxisGroup.selectAll("path, line")
     .style("stroke", "black"); // Set x-axis line color to black
 
@@ -77,7 +77,7 @@ function gotData(medalData, gdpData, countryName){
   viz.append("text")
     .attr("class", "xAxisLabel")
     .attr("x", w / 2)
-    .attr("y", h - 50) // Adjust the y-coordinate as needed
+    .attr("y", h - 70) // Adjust the y-coordinate as needed
     .style("font-size", "15px") // Set the font size to 16 pixels
     .style("text-anchor", "middle")
     .text("Years");
@@ -86,7 +86,7 @@ function gotData(medalData, gdpData, countryName){
   viz.append("text")
     .attr("class", "yAxisLabel")
     .attr("transform", "rotate(-90)")
-    .attr("x", -h / 2)
+    .attr("x", -h / 2 + 15)
     .attr("y", 15) // Adjust the y-coordinate as needed
     .style("font-size", "15px") // Set the font size to 16 pixels
     .style("text-anchor", "middle")

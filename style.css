@@ -114,11 +114,9 @@ img{
 #graphScrollbarWrapper{
     aspect-ratio: 1.72;
     display: flex;
-    overflow-x: auto;       
     width: 100%;
     max-width: 850px;
     margin: auto;
-
 }
 
 #sideView {
